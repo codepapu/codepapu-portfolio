@@ -20,6 +20,32 @@ function _ScrollToTop(props) {
 const ScrollToTop = withRouter(_ScrollToTop);
 
 export default function App() {
+
+  useEffect(() => {
+    // Disable F12 and Ctrl+Shift+I
+    const handleKeyDown = (e) => {
+      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        e.preventDefault();
+        console.log("Developer tools are disabled.");
+      }
+    };
+
+    // Disable right-click context menu
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      console.log("Right-click is disabled.");
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    // Cleanup on component unmount
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []); 
+  
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="cursor__dot">
