@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5313fec1.css",
-    "main.js": "/static/js/main.61b472cf.js",
+    "main.js": "/static/js/main.3939217c.js",
     "static/media/intro-image.jpg": "/static/media/intro-image.96fa9f9e65736ba5e8a1.jpg",
     "static/media/ms_paint_classic.png": "/static/media/ms_paint_classic.31f68ec368c94d600d7e.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
@@ -55,6 +55,6 @@
   },
   "entrypoints": [
     "static/css/main.5313fec1.css",
-    "static/js/main.61b472cf.js"
+    "static/js/main.3939217c.js"
   ]
 }
