@@ -11,6 +11,13 @@ section {
     font-family: Cinzel;
 }
 
+.intro_btn-action {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; /* Ensures proper spacing between buttons */
+    margin-bottom: 20px; /* Adds spacing below the button section */
+}
+
 .has-first-color {
     color: var(--primary-color);
 }
