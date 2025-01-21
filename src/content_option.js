@@ -159,7 +159,7 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com/codepapu",
+    github: "https://github.com/",
     linkedin: "https://www.linkedin.com/in/codepapu/",
     twitter: "https://x.com/codepapu",
     stackoverflow: "https://stackoverflow.com/users/27236242/codepapu"
