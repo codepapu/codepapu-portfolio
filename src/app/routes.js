@@ -1,34 +1,45 @@
 import React from "react";
-import { Route, Routes} from "react-router-dom";
-import withRouter from "../hooks/withRouter"
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { Ap } from "../pages/ap";
 import { Home } from "../pages/home";
-import { Portfolio } from "../pages/portfolio";
-import { ContactUs } from "../pages/contact";
+import { Resume } from "../pages/resume";
+import { Skills } from "../pages/skills";
+import { Project } from "../pages/project";
+import { Resources } from "../pages/resources";
 import { About } from "../pages/about";
+import { ContactUs } from "../pages/contact";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-const AnimatedRoutes = withRouter(({ location }) => (
-  <TransitionGroup>
-    <CSSTransition
-      key={location.key}
-      timeout={{
-        enter: 400,
-        exit: 400,
-      }}
-      classNames="page"
-      unmountOnExit
-    >
-      <Routes location={location}>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </CSSTransition>
-  </TransitionGroup>
-));
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        timeout={{
+          enter: 400,
+          exit: 400,
+        }}
+        classNames="page fade"
+        unmountOnExit
+      >
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/ap" element={<Ap />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+};
 
 function AppRoutes() {
   return (

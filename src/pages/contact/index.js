@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
+import logocodepapu from '../../assets/images/logo.png';
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -69,8 +69,9 @@ export const ContactUs = () => {
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
+          <title>Contact | code.papu</title>
+          <meta name="description" content="code.papu" />
+          <link rel="icon" href={logocodepapu} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
