@@ -26,7 +26,7 @@ const AnimatedRoutes = () => {
         classNames="page fade"
         unmountOnExit
       >
-        <Routes location={location}>
+        <Routes location={location} basename="/">
           <Route path="/" element={<Home />} />
           <Route path="/ap" element={<Ap />} />
           <Route path="/resume" element={<Resume />} />
