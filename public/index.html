@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="author" content="code.papu">
+    <meta property="og:image" content="https://iili.io/2iriV8N.png" />
+    <meta property="og:title" content="code.papu" />
+    <meta property="og:description" content="Welcome to My Portfolio.." />
+    <meta property="og:type" content="portfolio" />
+    <meta property="og:url" content="https://codepapu.in" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
@@ -15,22 +20,31 @@
     <script>
         $(document).ready(function () {
             // Check if the current path is valid
-            const validRoutes = ['/home', '/about', '/contact', '/resume', '/skills', '/project', '/resources', '/ap'];
-            
-            function checkValidRoute() {
+            // const validRoutes = ['/home', '/about', '/contact', '/resume', '/skills', '/project', '/resources', '/ap'];
+            const validRoutes = [];
+
+            /*function checkValidRoute() {
                 const currentPath = window.location.pathname;
                 if (!validRoutes.includes(currentPath)) {
-                window.location.href = '/404';
+                    window.location.href = '/404';
                 }
+            }*/
+
+            const currentPath = window.location.pathname;
+
+            // Check if the current path is valid
+            if (!validPaths.includes(currentPath)) {
+                // Redirect to the base URL
+                window.location.href = "/";
             }
             
             // Call on page load
-            checkValidRoute();
+            //checkValidRoute();
             
             // If using hash-based routing or updating the URL dynamically (SPA)
-            $(window).on('popstate', function () {
-                checkValidRoute();
-            });
+            //$(window).on('popstate', function () {
+                //checkValidRoute();
+            //});
         });
     </script>      
 </head>
