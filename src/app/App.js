@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { HashRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
