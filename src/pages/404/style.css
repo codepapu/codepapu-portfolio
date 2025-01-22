@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
+
+.custom-404-site {
+  height: 100%;
+}
+
+.custom-404-red {
+  min-height: 100%;
+}
+
+.custom-404-title {
+  font-family: "Cabin Sketch", cursive;
+  font-size: 3em;
+  text-align: center;
+  opacity: 0.8;
+  order: 1;
+}
+
+.custom-404-title small {
+  display: block;
+}
+
+.custom-404-site {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.custom-404-sketch {
+  position: relative;
+  height: 400px;
+  min-width: 400px;
+  margin: 0;
+  overflow: visible;
+  order: 2;
+}
+
+.custom-404-bee-sketch {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-404-red {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png)
+    no-repeat center center;
+  opacity: 1;
+  animation: custom-404-red 3s linear infinite,
+    custom-404-opacity-red 5s linear alternate infinite;
+}
+
+.custom-404-blue {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png)
+    no-repeat center center;
+  opacity: 0;
+  animation: custom-404-blue 3s linear infinite,
+    custom-404-opacity-blue 5s linear alternate infinite;
+}
+
+@media only screen and (min-width: 780px) {
+  .custom-404-site {
+    flex-direction: row;
+    padding: 1em 3em 1em 0em;
+  }
+
+  .custom-404-title {
+    text-align: right;
+    order: 2;
+    padding-bottom: 2em;
+    padding-left: 2em;
+  }
+
+  .custom-404-sketch {
+    order: 1;
+  }
+}
+
+@keyframes custom-404-blue {
+  0% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
+  }
+  9.09% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-2.png);
+  }
+  27.27% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-3.png);
+  }
+  /* Add more steps here */
+}
+
+@keyframes custom-404-red {
+  0% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png);
+  }
+  9.09% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-2.png);
+  }
+  27.27% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-3.png);
+  }
+  /* Add more steps here */
+}
+
+@keyframes custom-404-opacity-blue {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes custom-404-opacity-red {
+  from {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.3;
+  }
+}

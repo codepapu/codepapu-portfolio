@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { Ap } from "../pages/ap";
+import { PageNotFound } from "../pages/404";
 import { Home } from "../pages/home";
 import { Resume } from "../pages/resume";
 import { Skills } from "../pages/skills";
@@ -34,7 +35,7 @@ const AnimatedRoutes = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
