@@ -1,5 +1,8 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from "react-router-dom";
+import React from 'react';
+import { useLocation, Routes, Route, Navigate } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import $ from 'jquery';
+
 import { Ap } from "../pages/ap";
 import { PageNotFound } from "../pages/404";
 import { Home } from "../pages/home";
@@ -10,7 +13,6 @@ import { Resources } from "../pages/resources";
 import { About } from "../pages/about";
 import { ContactUs } from "../pages/contact";
 import { Socialicons } from "../components/socialicons";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -35,8 +37,9 @@ const AnimatedRoutes = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path='/404' element={<PageNotFound/>} />
-          <Route path='*' element={<Navigate replace to='/404'/>} />
+          <Route path="/404" element={<PageNotFound />} />
+          {/* Fallback route for unmatched URLs */}
+          <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
       </CSSTransition>
     </TransitionGroup>
